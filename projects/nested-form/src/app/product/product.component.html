@@ -1,0 +1,14 @@
+<h2>Vehicle</h2>
+<form class="row g-3" (submit)="onSubmit()" #productForm="ngForm">
+  <div class="col-md-6">
+    <select class="form-select" aria-label="Choose product" [(ngModel)]="selectedProduct" required name="product">
+      <option value="">Please select a item</option>
+      <ng-container *ngFor="let product of products; trackBy: productTrackBy">
+        <option [value]="product.id">{{product.name}}</option>
+      </ng-container>
+    </select>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary mt-4" [disabled]="productForm.invalid">Submit</button>
+  </div>
+</form>
