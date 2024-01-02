@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductComponent } from './product/product.component';
 import { ShipmentFormComponent } from './shipment-form/shipment-form.component';
 import { PaymentComponent } from './payment/payment.component';
+import { AllInOneComponent } from './all-in-one/all-in-one.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'payment',
     component: PaymentComponent
+  },
+  {
+    path: 'all-in-one',
+    component: AllInOneComponent
   },
   {
     path: "",

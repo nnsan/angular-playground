@@ -1,5 +1,5 @@
 <h2>Vehicle</h2>
-<form class="row g-3" (submit)="onSubmit()" #productForm="ngForm">
+<div class="row g-3">
   <div class="col-md-6">
     <select class="form-select" aria-label="Choose product" [(ngModel)]="selectedProduct" required name="product">
       <option value="">Please select a item</option>
@@ -8,7 +8,7 @@
       </ng-container>
     </select>
   </div>
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary mt-4" [disabled]="productForm.invalid">Submit</button>
-  </div>
-</form>
+<!--  <div class="col-12">-->
+<!--    <button type="submit" class="btn btn-primary mt-4" [disabled]="productForm.invalid">Submit</button>-->
+<!--  </div>-->
+</div>
