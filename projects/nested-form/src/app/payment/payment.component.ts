@@ -11,8 +11,7 @@ export class PaymentComponent implements OnInit {
   paymentOption: string = 'creditCard';
   product: string = '';
 
-  constructor(private controlContainer: ControlContainer) {
-  }
+  constructor(private controlContainer: ControlContainer) {}
 
   ngOnInit(): void {
     // this.product = this.localStorageService.getData('productKey')?? '';
@@ -21,9 +20,5 @@ export class PaymentComponent implements OnInit {
         this.product = value.product;
       }
     });
-  }
-
-  onSubmit() {
-    console.log(this.paymentOption);
   }
 }

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ControlContainer, NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-shipment-form',
@@ -14,11 +13,5 @@ export class ShipmentFormComponent {
   lastName: string = '';
   phone: string = '';
 
-  constructor(private router: Router) {
-  }
-
-
-  onSubmit() {
-    this.router.navigate(['payment']);
-  }
+  constructor() {}
 }

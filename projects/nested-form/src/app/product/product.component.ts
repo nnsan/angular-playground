@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalStorageService } from '../service/local-storage.service';
-import { Router } from '@angular/router';
 import { ControlContainer, NgForm } from '@angular/forms';
 
 type Product = {
@@ -18,10 +16,7 @@ export class ProductComponent implements OnInit {
   products: Array<Product> = [];
   selectedProduct!: number;
 
-  constructor(
-    private localStorage: LocalStorageService,
-    private router: Router
-  ) {}
+  constructor() {}
 
   ngOnInit(): void {
     this.loadProducts();
@@ -30,11 +25,6 @@ export class ProductComponent implements OnInit {
 
   public productTrackBy(idx: number, item: Product) {
     return item.id;
-  }
-
-  public onSubmit() {
-    this.localStorage.saveData('productKey', `${this.selectedProduct}`);
-    this.router.navigate(['shipping'])
   }
 
   private loadProducts() {
