@@ -8,10 +8,9 @@ import { ControlContainer } from '@angular/forms';
 })
 export class AllInOneComponent {
 
-  constructor(private controlContainer: ControlContainer) {}
+  constructor() {}
 
-
-  onSubmit() {
-    console.log(this.controlContainer);
+  onSubmit(form: ControlContainer) {
+    console.log(form);
   }
 }
