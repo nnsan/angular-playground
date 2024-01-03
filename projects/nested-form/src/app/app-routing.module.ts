@@ -7,6 +7,10 @@ import { AllInOneComponent } from './all-in-one/all-in-one.component';
 
 const routes: Routes = [
   {
+    path: 'product',
+    component: ProductComponent
+  },
+  {
     path: 'shipping',
     component: ShipmentFormComponent
   },
