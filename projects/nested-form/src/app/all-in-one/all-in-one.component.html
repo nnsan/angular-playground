@@ -1,0 +1,9 @@
+<h1>All in One Form</h1>
+<form (submit)="onSubmit(allInOneForm)" #allInOneForm="ngForm">
+  <app-product></app-product>
+  <app-shipment-form></app-shipment-form>
+  <app-payment></app-payment>
+  <div class="col-12">
+    <button class="btn btn-primary mt-4" type="submit" [disabled]="allInOneForm.invalid">Submit</button>
+  </div>
+</form>

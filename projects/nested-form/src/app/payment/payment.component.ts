@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalStorageService } from '../service/local-storage.service';
+import { ControlContainer } from '@angular/forms';
+import { debounceTime } from 'rxjs';
 
 @Component({
   selector: 'app-payment',
@@ -10,15 +11,14 @@ export class PaymentComponent implements OnInit {
   paymentOption: string = 'creditCard';
   product: string = '';
 
-  constructor(private localStorageService: LocalStorageService) {
-    
-  }
+  constructor(private controlContainer: ControlContainer) {}
 
   ngOnInit(): void {
-    this.product = this.localStorageService.getData('productKey')?? '';
-  }
-
-  onSubmit() {
-    console.log(this.paymentOption);
+    // this.product = this.localStorageService.getData('productKey')?? '';
+    this.controlContainer.control?.valueChanges?.pipe(debounceTime(200)).subscribe((value) => {
+      if (this.product !== value.product) {
+        this.product = value.product;
+      }
+    });
   }
 }

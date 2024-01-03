@@ -7,13 +7,15 @@ import { ProductComponent } from './product/product.component';
 import { FormsModule } from '@angular/forms';
 import { ShipmentFormComponent } from './shipment-form/shipment-form.component';
 import { PaymentComponent } from './payment/payment.component';
+import { AllInOneComponent } from './all-in-one/all-in-one.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     ShipmentFormComponent,
-    PaymentComponent
+    PaymentComponent,
+    AllInOneComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 <h2>Shipping</h2>
-<form class="row g-3" (submit)="onSubmit()" #shipping="ngForm">
+<div class="row g-3">
   <div class="col-md-6">
     <label class="form-label">Email address</label>
     <input type="email" name="email" class="form-control" required placeholder="name@example.com" [(ngModel)]="email">
@@ -18,7 +18,4 @@
     <label class="form-label">Phone Number</label>
     <input type="text" name="phone" class="form-control" placeholder="0123456789" [(ngModel)]="phone">
   </div>
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary mt-4" [disabled]="shipping.invalid">Submit</button>
-  </div>
-</form>
+</div>

@@ -3,8 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductComponent } from './product/product.component';
 import { ShipmentFormComponent } from './shipment-form/shipment-form.component';
 import { PaymentComponent } from './payment/payment.component';
+import { AllInOneComponent } from './all-in-one/all-in-one.component';
 
 const routes: Routes = [
+  {
+    path: 'product',
+    component: ProductComponent
+  },
   {
     path: 'shipping',
     component: ShipmentFormComponent
@@ -14,8 +19,13 @@ const routes: Routes = [
     component: PaymentComponent
   },
   {
+    path: 'all-in-one',
+    component: AllInOneComponent
+  },
+  {
     path: "",
-    component: ProductComponent
+    pathMatch: 'full',
+    redirectTo: 'all-in-one',
   }
 ];
 
